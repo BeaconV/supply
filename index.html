@@ -12,6 +12,7 @@
             --nhs-light-grey: #f0f4f5;
             --nhs-grey: #768692;
             --nhs-green: #007f3b;
+            --nhs-yellow: #ffb81c;
             --text-colour: #212b32;
         }
 
@@ -23,8 +24,8 @@
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             color: var(--text-colour);
-            line-height: 1.6;
             background: #ffffff;
+            line-height: 1.6;
         }
 
         header {
@@ -92,7 +93,7 @@
 
         .contact-box {
             background: #fff9e6;
-            border-left: 6px solid #ffb81c;
+            border-left: 6px solid var(--nhs-yellow);
             padding: 1.5rem;
             border-radius: 4px;
             margin-top: 2rem;
@@ -107,6 +108,7 @@
             border-radius: 6px;
             margin-bottom: 1rem;
             background: #fafafa;
+            overflow: hidden;
         }
 
         summary {
@@ -118,8 +120,36 @@
 
         details p,
         details ul {
-            padding: 0 1rem 1rem;
+            padding: 0 1rem 1rem 1rem;
             margin-top: 0;
+        }
+
+        .download-section {
+            background: var(--nhs-light-grey);
+            border-left: 6px solid var(--nhs-blue);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: var(--nhs-blue);
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 0.75rem;
+            transition: background 0.2s ease-in-out;
+        }
+
+        .download-button:hover {
+            background: var(--nhs-dark-blue);
+        }
+
+        .download-button:visited {
+            color: white;
         }
 
         footer {
@@ -180,15 +210,13 @@
 
     <section class="intro-box">
         <p>
-            We understand that it can be concerning when a medicine you normally receive
-            is temporarily unavailable. Medicines shortages occasionally occur in the UK
-            and can affect community pharmacies, hospitals and dispensing practices.
+            We understand that it can be worrying when a medicine you rely on is temporarily unavailable.
+            Medicines shortages can happen for a variety of reasons and may affect pharmacies across the UK.
         </p>
 
         <p>
-            The NHS, manufacturers, wholesalers and pharmacies work together to minimise
-            disruption to patient care. This page provides practical advice about what to
-            do if your medicine is affected by a shortage.
+            The NHS, manufacturers, wholesalers and pharmacies work together to minimise disruption to patient care.
+            This page explains what to do if your medicine is affected by a shortage and answers some common questions.
         </p>
     </section>
 
@@ -197,9 +225,9 @@
 
         <ul>
             <li>Order repeat prescriptions in good time before you run out of medication.</li>
-            <li>Speak to your pharmacist early if you are having difficulty obtaining a medicine.</li>
-            <li>Do not stockpile medicines or order extra supplies unnecessarily.</li>
-            <li>Follow advice provided by your pharmacist, GP or specialist.</li>
+            <li>Speak to your pharmacist as early as possible if you are having difficulty obtaining a medicine.</li>
+            <li>Do not stockpile medicines or request extra supplies unnecessarily.</li>
+            <li>Follow advice provided by your pharmacist, GP or specialist team.</li>
             <li>Do not stop prescribed medication unless advised by a healthcare professional.</li>
         </ul>
     </section>
@@ -207,20 +235,21 @@
     <section>
         <h2>Why do medicines shortages occur?</h2>
 
-        <p>Medicines shortages can occur for several reasons, including:</p>
+        <p>
+            Medicines shortages can occur for several reasons, including:
+        </p>
 
         <ul>
-            <li>Manufacturing problems.</li>
+            <li>Manufacturing difficulties.</li>
             <li>Quality assurance issues.</li>
             <li>Shortages of raw ingredients.</li>
             <li>Unexpected increases in demand.</li>
             <li>Global supply chain disruptions.</li>
-            <li>Distribution and transport difficulties.</li>
+            <li>Transport and distribution challenges.</li>
         </ul>
 
         <p>
-            Most shortages are temporary and healthcare professionals receive regular
-            updates regarding national supply issues and available alternatives.
+            Most shortages are temporary and healthcare professionals receive regular updates regarding national supply issues and recommended alternatives.
         </p>
     </section>
 
@@ -231,64 +260,59 @@
             <summary>What happens if my medicine is unavailable?</summary>
             <p>Your pharmacist or prescriber may be able to:</p>
             <ul>
-                <li>Source stock from another supplier.</li>
-                <li>Direct you to another pharmacy.</li>
-                <li>Supply an alternative strength or formulation.</li>
-                <li>Arrange an alternative medicine if appropriate.</li>
+                <li>Source stock from an alternative supplier.</li>
+                <li>Direct you to another pharmacy that has stock available.</li>
+                <li>Supply a different strength or formulation.</li>
+                <li>Arrange an alternative medicine where clinically appropriate.</li>
             </ul>
         </details>
 
         <details>
             <summary>Why can one pharmacy obtain my medicine when another cannot?</summary>
             <p>
-                Pharmacies use different suppliers and wholesalers. Some medicines are
-                also subject to manufacturer quotas which
+                Pharmacies often use different suppliers and wholesalers. Some medicines are also subject to manufacturer quotas which can affect local availability.
+            </p>
+        </details>
+
+        <details>
             <summary>Can pharmacies see stock held by other pharmacies?</summary>
             <p>
-                Usually not. Different pharmacy organisations often use separate
-                computer systems. Pharmacy teams may sometimes contact nearby pharmacies
-                to help locate stock.
+                Usually not. Different pharmacy organisations use different computer systems and cannot routinely view each other's stock levels.
             </p>
         </details>
 
         <details>
             <summary>Will I need a new prescription for an alternative medicine?</summary>
             <p>
-                Sometimes. If an alternative treatment is needed, a GP or other authorised
-                prescriber may need to issue a new prescription.
+                Sometimes. If a clinically suitable alternative is required, a GP or other authorised prescriber may need to issue a new prescription.
             </p>
         </details>
 
         <details>
             <summary>What if the alternative medicine causes side effects?</summary>
             <p>
-                If you have concerns about an alternative medicine, speak with your
-                pharmacist, GP, specialist team or NHS 111.
+                If you experience side effects or have concerns about an alternative medicine, please contact your pharmacist, GP practice or specialist team.
             </p>
         </details>
 
         <details>
-            <summary>What if there is no suitable alternative?</summary>
+            <summary>What if there is no suitable alternative available?</summary>
             <p>
-                In rare circumstances there may be no suitable alternative available.
-                Your healthcare team will discuss the available options and agree a
-                management plan with you.
+                In rare circumstances there may not be a suitable alternative. Your healthcare team will discuss the available options and develop an individual treatment plan with you.
             </p>
         </details>
 
         <details>
-            <summary>Will my pharmacist know when supplies return?</summary>
+            <summary>Will my pharmacist know when supplies will return?</summary>
             <p>
-                Pharmacists receive regular supply updates and may be able to advise when
-                medicines are expected to become available again.
+                Pharmacists receive regular supply updates and may be able to advise when stocks are expected to be available again.
             </p>
         </details>
 
         <details>
             <summary>What is being done nationally to manage medicines shortages?</summary>
             <p>
-                Manufacturers, wholesalers, regulators and NHS organisations work
-                together to identify shortages early and minimise their impact on patients.
+                Manufacturers, wholesalers, regulators and NHS organisations work together to identify and manage shortages in order to minimise disruption to patients.
             </p>
         </details>
 
@@ -297,14 +321,30 @@
     <section class="contact-box">
         <h2>Need further advice?</h2>
 
-        <p>If you have concerns regarding your medicines, please contact:</p>
+        <p>If you have concerns about your medicines, please contact:</p>
 
         <ul>
             <li>Your community pharmacy</li>
             <li>Your GP practice</li>
             <li>Your hospital specialist team (if applicable)</li>
-            <li>NHS 111 for urgent advice when your usual services are unavailable</li>
+            <li>NHS 111 for urgent advice when your usual healthcare services are unavailable</li>
         </ul>
+    </section>
+
+    <section class="download-section">
+        <h2>📄 Download Patient Information Leaflet</h2>
+
+        <p>
+            Prefer a printable version? Download the patient information leaflet below.
+        </p>
+
+        <a
+            href="assets/shortage.pdf"
+            class="download-button"
+            target="_blank"
+            download>
+            Download PDF Leaflet
+        </a>
     </section>
 
 </main>
@@ -312,8 +352,12 @@
 <footer>
     <div class="footer-content">
         <p>
-            This information provides general guidance only. Advice from your doctor,
+            This information provides general guidance only. Advice given by your doctor,
             pharmacist or other healthcare professional should always take precedence.
+        </p>
+
+        <p>
+            Last updated: October 2026
         </p>
     </div>
 </footer>
