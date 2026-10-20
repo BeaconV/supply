@@ -12,7 +12,7 @@
             --nhs-light-grey: #f0f4f5;
             --nhs-grey: #768692;
             --nhs-green: #007f3b;
-            --text: #212b32;
+            --text-colour: #212b32;
         }
 
         * {
@@ -20,23 +20,35 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            background: #ffffff;
-            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text-colour);
             line-height: 1.6;
+            background: #ffffff;
         }
 
         header {
             background: var(--nhs-blue);
             color: white;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .nhs-logo {
+            height: 64px;
+            width: auto;
+            background: white;
+            padding: 4px;
+            border-radius: 4px;
+            flex-shrink: 0;
         }
 
         h1 {
@@ -44,206 +56,266 @@
             font-size: 2rem;
         }
 
-        h2 {
-            color: var(--nhs-blue);
-            border-bottom: 3px solid var(--nhs-light-grey);
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
+        .subtitle {
+            margin-top: 0.5rem;
+            font-size: 1.05rem;
         }
 
-        .intro {
-            font-size: 1.1rem;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            color: var(--nhs-blue);
+            margin-top: 2rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 3px solid var(--nhs-light-grey);
+        }
+
+        .intro-box {
             background: var(--nhs-light-grey);
-            padding: 1.5rem;
             border-left: 6px solid var(--nhs-blue);
+            padding: 1.5rem;
             border-radius: 4px;
+            margin-bottom: 2rem;
         }
 
         .action-box {
             background: #f7fff8;
             border-left: 6px solid var(--nhs-green);
             padding: 1.5rem;
-            margin: 2rem 0;
             border-radius: 4px;
-        }
-
-        .action-box ul {
-            margin: 0;
-        }
-
-        details {
-            background: #fafafa;
-            border: 1px solid #d8dde0;
-            border-radius: 6px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        summary {
-            cursor: pointer;
-            font-weight: bold;
-            color: var(--nhs-dark-blue);
-        }
-
-        footer {
-            background: var(--nhs-light-grey);
-            padding: 2rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            color: var(--nhs-grey);
+            margin: 2rem 0;
         }
 
         .contact-box {
             background: #fff9e6;
             border-left: 6px solid #ffb81c;
             padding: 1.5rem;
-            margin-top: 2rem;
             border-radius: 4px;
+            margin-top: 2rem;
         }
 
-        a {
-            color: var(--nhs-blue);
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        details {
+            border: 1px solid #d8dde0;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            background: #fafafa;
+        }
+
+        summary {
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--nhs-dark-blue);
+        }
+
+        details p,
+        details ul {
+            padding: 0 1rem 1rem;
+            margin-top: 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            background: var(--nhs-light-grey);
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            color: var(--nhs-grey);
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nhs-logo {
+                height: 52px;
             }
 
             h1 {
                 font-size: 1.6rem;
             }
+
+            .container {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Advice for Patients During a Medicines Shortage</h1>
-    <p>Information and guidance for patients and carers in England</p>
+    <div class="header-content">
+
+        <img
+            src="assets/NHS%2010mm%20-%20RGB%20Blue%20on%20white.jpg"
+            alt="NHS Logo"
+            class="nhs-logo">
+
+        <div>
+            <h1>Advice for Patients During a Medicines Shortage</h1>
+            <p class="subtitle">
+                Information and guidance for patients and carers in England
+            </p>
+        </div>
+
+    </div>
 </header>
 
-<div class="container">
+<main class="container">
 
-    <div class="intro">
+    <section class="intro-box">
         <p>
-            We know how difficult and stressful medicines supply issues can be for patients and carers.
-            This page provides practical advice about what to do if your medicine is unavailable and
-            explains how pharmacies, GPs and the NHS work together to minimise the impact of shortages.
+            We understand that it can be concerning when a medicine you normally receive
+            is temporarily unavailable. Medicines shortages occasionally occur in the UK
+            and can affect community pharmacies, hospitals and dispensing practices.
         </p>
-    </div>
 
-    <div class="action-box">
-        <h2>What You Should Do</h2>
+        <p>
+            The NHS, manufacturers, wholesalers and pharmacies work together to minimise
+            disruption to patient care. This page provides practical advice about what to
+            do if your medicine is affected by a shortage.
+        </p>
+    </section>
+
+    <section class="action-box">
+        <h2>What should I do?</h2>
+
         <ul>
-            <li>Order your repeat prescription in good time while you still have medication available.</li>
-            <li>Speak to your pharmacist as early as possible if you are having difficulty obtaining your medicine.</li>
-            <li>Avoid stockpiling medicines or ordering more than you need.</li>
-            <li>Follow the advice given by your pharmacist, GP or specialist healthcare professional.</li>
+            <li>Order repeat prescriptions in good time before you run out of medication.</li>
+            <li>Speak to your pharmacist early if you are having difficulty obtaining a medicine.</li>
+            <li>Do not stockpile medicines or order extra supplies unnecessarily.</li>
+            <li>Follow advice provided by your pharmacist, GP or specialist.</li>
+            <li>Do not stop prescribed medication unless advised by a healthcare professional.</li>
         </ul>
-    </div>
+    </section>
 
-    <h2>Why Do Medicines Shortages Happen?</h2>
+    <section>
+        <h2>Why do medicines shortages occur?</h2>
 
-    <p>
-        Most prescription medicines are supplied without any problems. However, temporary shortages can occur.
-        These may be caused by:
-    </p>
+        <p>Medicines shortages can occur for several reasons, including:</p>
 
-    <ul>
-        <li>Shortages of ingredients needed to manufacture medicines.</li>
-        <li>Unexpected increases in demand.</li>
-        <li>Manufacturing or quality assurance issues.</li>
-        <li>Global events affecting supply chains.</li>
-    </ul>
-
-    <p>
-        The government, medicine suppliers and NHS organisations work closely together to manage shortages
-        and reduce disruption to patient care.
-    </p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <details>
-        <summary>What will my pharmacy or GP do if my medication is unavailable because of a national shortage?</summary>
-        <p>You may:</p>
         <ul>
-            <li>Be advised to collect your medicine from another pharmacy.</li>
-            <li>Receive a different formulation, such as tablets instead of capsules.</li>
-            <li>Receive a smaller quantity of medicine and need more frequent collections.</li>
-            <li>Be asked to obtain a new prescription for an available alternative medicine.</li>
+            <li>Manufacturing problems.</li>
+            <li>Quality assurance issues.</li>
+            <li>Shortages of raw ingredients.</li>
+            <li>Unexpected increases in demand.</li>
+            <li>Global supply chain disruptions.</li>
+            <li>Distribution and transport difficulties.</li>
         </ul>
-    </details>
 
-    <details>
-        <summary>My pharmacy cannot get my medicine, but another pharmacy might have it. Why?</summary>
         <p>
-            Different pharmacies use different suppliers and wholesalers. In addition,
-            some medicines are subject to ordering limits (quotas), meaning one pharmacy
-            may still have stock while another has exhausted its allowance.
+            Most shortages are temporary and healthcare professionals receive regular
+            updates regarding national supply issues and available alternatives.
         </p>
-    </details>
+    </section>
 
-    <details>
-        <summary>Can my pharmacy see stock levels at other pharmacies?</summary>
-        <p>
-            Pharmacies that belong to different companies generally do not share computer systems
-            and cannot directly see each other's stock levels. However, pharmacy teams may be able
-            to contact nearby pharmacies to help locate supplies.
-        </p>
-    </details>
+    <section>
+        <h2>Frequently Asked Questions</h2>
 
-    <details>
-        <summary>What if an alternative medicine causes side effects or does not work as well?</summary>
-        <p>
-            You should discuss this with your pharmacist or doctor. They can review your treatment
-            and determine whether a different approach is needed.
-        </p>
-    </details>
+        <details>
+            <summary>What happens if my medicine is unavailable?</summary>
+            <p>Your pharmacist or prescriber may be able to:</p>
+            <ul>
+                <li>Source stock from another supplier.</li>
+                <li>Direct you to another pharmacy.</li>
+                <li>Supply an alternative strength or formulation.</li>
+                <li>Arrange an alternative medicine if appropriate.</li>
+            </ul>
+        </details>
 
-    <details>
-        <summary>What if there is no alternative medicine available?</summary>
-        <p>
-            In rare circumstances there may be no suitable alternative treatment.
-            Your doctor or pharmacist will explain the options available and advise
-            you on the next steps.
-        </p>
-    </details>
+        <details>
+            <summary>Why can one pharmacy obtain my medicine when another cannot?</summary>
+            <p>
+                Pharmacies use different suppliers and wholesalers. Some medicines are
+                also subject to manufacturer quotas which
+            <summary>Can pharmacies see stock held by other pharmacies?</summary>
+            <p>
+                Usually not. Different pharmacy organisations often use separate
+                computer systems. Pharmacy teams may sometimes contact nearby pharmacies
+                to help locate stock.
+            </p>
+        </details>
 
-    <details>
-        <summary>Will my pharmacist know when my medicine is back in stock?</summary>
-        <p>
-            NHS healthcare professionals have access to regularly updated medicines
-            supply information. Your pharmacist may be able to advise when supplies
-            are expected to return.
-        </p>
-    </details>
+        <details>
+            <summary>Will I need a new prescription for an alternative medicine?</summary>
+            <p>
+                Sometimes. If an alternative treatment is needed, a GP or other authorised
+                prescriber may need to issue a new prescription.
+            </p>
+        </details>
 
-    <details>
-        <summary>What is the government doing to manage medicine shortages?</summary>
-        <p>
-            Medicine suppliers are legally required to report shortages to the government.
-            National processes are in place involving medicine suppliers, NHS England,
-            regulators and the wider supply chain to minimise the impact on patients.
-        </p>
-    </details>
+        <details>
+            <summary>What if the alternative medicine causes side effects?</summary>
+            <p>
+                If you have concerns about an alternative medicine, speak with your
+                pharmacist, GP, specialist team or NHS 111.
+            </p>
+        </details>
 
-    <div class="contact-box">
-        <h2>I Still Have Questions</h2>
-        <p>
-            If you are concerned about your medicine, speak to your pharmacist or doctor.
-            If you need urgent advice when your GP practice is closed, contact NHS 111.
-        </p>
-    </div>
+        <details>
+            <summary>What if there is no suitable alternative?</summary>
+            <p>
+                In rare circumstances there may be no suitable alternative available.
+                Your healthcare team will discuss the available options and agree a
+                management plan with you.
+            </p>
+        </details>
 
-</div>
+        <details>
+            <summary>Will my pharmacist know when supplies return?</summary>
+            <p>
+                Pharmacists receive regular supply updates and may be able to advise when
+                medicines are expected to become available again.
+            </p>
+        </details>
+
+        <details>
+            <summary>What is being done nationally to manage medicines shortages?</summary>
+            <p>
+                Manufacturers, wholesalers, regulators and NHS organisations work
+                together to identify shortages early and minimise their impact on patients.
+            </p>
+        </details>
+
+    </section>
+
+    <section class="contact-box">
+        <h2>Need further advice?</h2>
+
+        <p>If you have concerns regarding your medicines, please contact:</p>
+
+        <ul>
+            <li>Your community pharmacy</li>
+            <li>Your GP practice</li>
+            <li>Your hospital specialist team (if applicable)</li>
+            <li>NHS 111 for urgent advice when your usual services are unavailable</li>
+        </ul>
+    </section>
+
+</main>
 
 <footer>
-    <p>
-        This information is intended for patients and carers in England and provides general guidance
-        regarding medicines shortages. Individual advice from your healthcare professional should always
-        take precedence.
-    </p>
+    <div class="footer-content">
+        <p>
+            This information provides general guidance only. Advice from your doctor,
+            pharmacist or other healthcare professional should always take precedence.
+        </p>
+    </div>
 </footer>
 
 </body>
